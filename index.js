@@ -5,6 +5,11 @@ const getComputerChoice = ()=>{
     return computerChoice
 }
 
+const getUserChoice = ()=>{
+    const userChoice = prompt('choose from the three options: rock, paper, scissors','');
+    return userChoice
+}
+
 
 
 
