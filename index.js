@@ -6,7 +6,10 @@ const getComputerChoice = ()=>{
 }
 
 const getUserChoice = ()=>{
-    const userChoice = prompt('choose from the three options: rock, paper, scissors','');
+    let userChoice = prompt('choose from the three options: rock, paper, scissors','');
+    if(userChoice.toLowerCase() != 'rock'.toLowerCase() || userChoice.toLowerCase() != 'paper'.toLowerCase() ||userChoice.toLowerCase() != 'scissors'.toLowerCase()){
+        userChoice = prompt('you have entered a wrong choice, please choose from rock, paper or scissors', '')
+    }
     return userChoice
 }
 const playGame = ()=>{
@@ -36,7 +39,18 @@ const playGame = ()=>{
         result = lose;
         console.log(result);
     }
+    if(userChoice.toLowerCase() == 'scissors' && computerChoice.toLowerCase() == 'rock'.toLowerCase()){
+        result = lose;
+        console.log(result)
+    }else if(userChoice.toLowerCase() == 'scissors' && computerChoice.toLowerCase() == 'paper'.toLowerCase()){
+        result = win
+        console.log(result)
+    }else if(userChoice.toLowerCase() == 'scissors' && computerChoice.toLowerCase() == 'scissors'.toLowerCase()){
+        result = tie;
+        console.log(result);
+    }
 }
+playGame()
 
     
 
