@@ -26,9 +26,21 @@ const playGame = ()=>{
         result = win;
         console.log(result);
     }
+    if(userChoice.toLowerCase() == 'paper' && computerChoice.toLowerCase() == 'rock'.toLowerCase()){
+        result = win;
+        console.log(result)
+    }else if(userChoice.toLowerCase() == 'paper' && computerChoice.toLowerCase() == 'paper'.toLowerCase()){
+        result = tie
+        console.log(result)
+    }else if(userChoice.toLowerCase() == 'paper' && computerChoice.toLowerCase() == 'scissors'.toLowerCase()){
+        result = lose;
+        console.log(result);
+    }
 }
 
-playGame();
+    
+
+
 
 
 
